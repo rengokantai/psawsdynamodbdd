@@ -1,4 +1,10 @@
 # psawsdynamodbdd
+## 2. Introduction
+### 2 NoSQL Databases and CAP Theorem
+pick two
+- Consistency: Receive the latest data on every read
+- Availablity: Every requests receives a non-error reply
+- Partition tolerance: System works despite some packets dropped
 ## 3. Getting Started with DynamoDB
 ### 2 Basic Concepts
 Key Types
