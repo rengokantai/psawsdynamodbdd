@@ -26,3 +26,15 @@ Partition Size Limit
 Querys they dont support
 - Sort posts from a user by rating or time
 - Find all posts for topic/user
+
+Types
+- Local secondary (select a different sort order for a partition key) values can be duplicated,limited by size of partition
+- Global secondary (Access data using a different partition key) copy with different partition key,always eventially consistent unlimited size, can store subset of attributes. You can emulate LSI using GSI  
+
+
+limitations
+- 5 GSI LSI per table
+- Single LSI can only be up to 10GB
+
+
+### 9 Pricing
