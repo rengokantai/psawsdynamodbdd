@@ -44,3 +44,34 @@ limitations
 
 
 ### 9 Pricing
+
+
+
+## 8. Operations with DynamoDB
+
+### 2 Monitoring DynamoDB
+Throughput
+```
+Provisioned/Consumed Read/Write CapacityUnits, Read/Write ThrottleEvents, ThrottledRequests
+```
+Data Returned
+```
+ReturnedRecordsCount, ReturnedItemCount,ReturnedBytes
+```
+Data Returned
+```
+ReturnedRecordCount, ReturnedItemCount, ReturnedBytes
+```
+
+
+### 10 Run Cross-region Replication
+```
+git clone https://github.com/awslabs/dynamodb-cross-region-library
+```
+cd dynamodb-cross-region-library
+mvn install
+java -jar target/dynamodb-cross-region...-1.2.1.jar --sourceRegion us-east-1 --sourceTable Comments --destinationRegion eu-west-1 --destinationTable Comments
+```
+
+
+
