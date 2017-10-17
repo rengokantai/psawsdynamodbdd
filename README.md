@@ -62,7 +62,17 @@ Data Returned
 ```
 ReturnedRecordCount, ReturnedItemCount, ReturnedBytes
 ```
+### 8 Creating and Restoring Back Ups
+create pipeline.  
+Source: Build using a template (export DynamoDB table to S3)  
 
+#### 03:30
+create another pipeline  
+Source: Import DynamoDB backup data from S3
+
+### 9 Cross-region Replication
+Low-latency access for global applications  
+__Maintain copy of data__
 
 ### 10 Run Cross-region Replication
 ```
