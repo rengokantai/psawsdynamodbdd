@@ -47,6 +47,21 @@ limitations
 
 
 
+
+
+
+## 7. Data Analytics with DynamoDB
+### 2 Using Redshift with DynamoDB
+step
+- Launch Redshift cluster
+- Copy DynamoDB data
+- Perform SQL queries
+
+
+
+
+
+
 ## 8. Operations with DynamoDB
 
 ### 2 Monitoring DynamoDB
@@ -62,13 +77,25 @@ Data Returned
 ```
 ReturnedRecordCount, ReturnedItemCount, ReturnedBytes
 ```
+
+
+### 4 CloudTrail
+```
+aws cloudtrail lookup-events
+```
+```
+aws cloudtrail lookup-events --lookup-attributes "AttributeKey=EventName,AttributeValue=CreateTable" --output json
+```
 ### 8 Creating and Restoring Back Ups
 create pipeline.  
 Source: Build using a template (export DynamoDB table to S3)  
 
 #### 03:30
 create another pipeline  
-Source: Import DynamoDB backup data from S3
+Source: Import DynamoDB backup data from S3  
+
+Parameters:
+Region of the DynamoDB table: eu-west-1
 
 ### 9 Cross-region Replication
 Low-latency access for global applications  
