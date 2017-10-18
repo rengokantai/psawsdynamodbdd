@@ -5,6 +5,9 @@ pick two
 - Consistency: Receive the latest data on every read
 - Availablity: Every requests receives a non-error reply
 - Partition tolerance: System works despite some packets dropped
+
+
+
 ## 3. Getting Started with DynamoDB
 ### 2 Basic Concepts
 Key Types
@@ -44,6 +47,38 @@ limitations
 
 
 ### 9 Pricing
+
+
+
+
+
+## 4. Developing with DynamoDB
+
+
+
+## 5. DynamoDB Streams
+### 2 Introduction to DynamoDB Streams
+```
+for (Record record:records){
+  if(record instanceof RecordAdapter){
+    com.amazonaws.services.dynamodbv2.model.Record streamRecord = ((RecordAdapter) record).getInternalObject();
+    switch(streamRecord.getEventName()){
+      case "INSERT":
+      case "MODIFY"
+      case "REMOVE"
+    }
+  }
+}
+```
+### 6 Update CloudSearch in Real-time
+choose ```dynamo-process-stream```  
+goto cloudsearch dashboard, copy document endpoint to lambda function
+```
+var cloudSearchClient= new aws.CloudSearchDomain({endpoint:'doc-shop..'});
+```
+
+
+
 
 
 
