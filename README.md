@@ -54,6 +54,12 @@ limitations
 
 ## 4. Developing with DynamoDB
 
+### 12 Transactions
+```
+AmazonDynamoDB client = new AmazonDynamoDBClient();
+TransactionManager.verifyOrCreateTransactionTable(client,"Transactions",10,10,10*60);
+TransactionManager.verifyOrCreateTransactionImagesTable(client,"Transactions",10,10,10*60);
+```
 
 
 ## 5. DynamoDB Streams
